@@ -13,6 +13,11 @@ body {
   height: 100%;
 }
 
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   line-height: 1.6;
@@ -39,3 +44,4 @@ ul {
   padding: 0;
   margin: 0;
 }
+
