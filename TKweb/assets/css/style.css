@@ -1,4 +1,7 @@
-
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
 .button {
   display: flex;
   padding: 16px 55px;
@@ -68,11 +71,34 @@
   font-weight: 400;
   line-height: 17px;
 }
+/* Floating button */
+
+.floating-buttons {
+  right: 32px;
+  bottom: 10px;
+  position: fixed;
+  display: flex;
+  gap: 23px;
+}
+.floating-buttons a {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.floating-buttons a:hover {
+  transform: translate(0, -5px);
+}
 /* Header */
 .header {
   background: #fff4f1;
   box-shadow: 7px 0px 24.7px 0px #d2d0df;
   padding: 19px 0;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 .header .main-nav {
   display: flex;
@@ -242,17 +268,19 @@
 /* Features pet */
 .featured-pets {
   background-color: #ffefeb;
+  padding-bottom: 182px;
 }
 .featured-pets .heading-h54 {
   text-align: center;
   padding-top: 79px;
   color: #992207;
+  margin-bottom: 54px;
 }
 .featured-pets .pet-carousel {
   border-radius: 31.023px;
   background: #fff;
   box-shadow: 8.864px 10.636px 20.475px 0px rgba(0, 0, 0, 0.1);
-  padding: 65px 50px;
+  padding: 100px 65px;
 }
 .featured-pets .pet-cards {
   display: flex;
@@ -264,6 +292,21 @@
   border-radius: 15px;
   padding: 20px;
   width: 258px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 162px;
+  padding-bottom: 64px;
+  transition: box-shadow 0.3s;
+}
+.featured-pets .pet-card .pet {
+  position: absolute;
+  top: -35px;
+}
+
+.featured-pets .pet-card:hover {
+  box-shadow: 9px 9px 11.5px 0px rgba(0, 0, 0, 0.12);
 }
 .featured-pets .pet-card .card-name {
   display: flex;
@@ -283,13 +326,317 @@
 }
 .featured-pets .pet-card .card-info {
   color: #000;
-  font-family: Nunito;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 17px;
   display: flex;
   gap: 8px;
   align-items: center;
-  width: 159px;
+}
+.featured-pets .carousel-control {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #d9d9d9;
+  transition: color 0.2s;
+}
+.featured-pets .carousel-control:hover {
+  color: #fa7353;
+}
+.featured-pets .carousel-control.next {
+  transform: scaleX(-1);
+}
+.carousel-indicators {
+  margin-top: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 39px;
+}
+.carousel-indicators span {
+  width: 15px;
+  height: 15px;
+  background-color: #9994aa;
+  border-radius: 14.5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.carousel-indicators span:hover,
+.carousel-indicators span.active {
+  background-color: #fa7353;
+}
+/* Adoption stats */
+.adoption-stats {
+  background: linear-gradient(268deg, #fbb91c -59.86%, #e74f2c 93.94%);
+  padding-top: 57px;
+  padding-bottom: 44px;
+}
+.adoption-stats .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.adoption-stats .stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+}
+.adoption-stats .stat strong {
+  color: #eae8f0;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.adoption-stats .stat span {
+  color: #eae8f0;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+}
+/* Support CTA */
+.support-cta {
+  padding-top: 82px;
+  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #992207 22.4%, rgba(255, 91, 53, 0) 88.4%),
+    url(/TKweb/assets/img/support-cta.jpg) lightgray right / 79% no-repeat;
+}
+
+.support-cta .heading-h54 {
+  margin-bottom: 44px;
+}
+.support-cta .paragraph-p3 {
+  margin-bottom: 44px;
+  width: 36%;
+}
+.support-cta .button {
+  display: inline-block;
+}
+/* Adoption Guide */
+.adoption-guide {
+  padding-top: 106px;
+  padding-bottom: 384px;
+  position: relative;
+  overflow: hidden;
+}
+.adoption-guide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -140px;
+  top: 200px;
+  background-image: url(/TKweb/assets/img/footprint.svg);
+  transform: rotate(17.524deg);
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: 60%;
+}
+.adoption-guide::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 630px;
+  top: 800px;
+  background-image: url(/TKweb/assets/img/footprint2.svg);
+  transform: rotate(20.512deg);
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-size: 50%;
+}
+
+.adoption-guide .heading-h54 {
+  color: #992207;
+  text-align: center;
+}
+.adoption-guide .paragraph-p2 {
+  width: 576px;
+  color: #363344;
+  text-align: center;
+  margin: 13px auto 135px;
+}
+.adoption-guide .step {
+  width: 263px;
+  padding: 48px 35px 36px;
+  position: relative;
+  border-radius: 17.587px;
+  background: #fff;
+  filter: drop-shadow(2px 6px 11.7px rgba(0, 0, 0, 0.25));
+}
+.adoption-guide .step:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+.adoption-guide .step2 {
+  transform: translateY(67px);
+  transition: 0.3s;
+}
+.adoption-guide .step2:hover {
+  transform: translateY(57px);
+  transition: 0.3s;
+}
+.adoption-guide .step3 {
+  transform: translateY(145px);
+  transition: 0.3s;
+}
+.adoption-guide .step3:hover {
+  transform: translateY(135px);
+}
+.adoption-guide .step-number {
+  top: -38px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 67.151px;
+  height: 67.151px;
+  background-color: #ffdad1;
+  border-radius: 50%;
+}
+.adoption-guide .heading-h40 {
+  color: #b53518;
+}
+.adoption-guide .guide-steps {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.adoption-guide .step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.adoption-guide .step-content .heading-h18 {
+  color: #b53518;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.adoption-guide .step-content img {
+  display: block;
+  margin: 0 auto 24px;
+  width: 159.883px;
+  height: 159.883px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.adoption-guide .step-content .paragraph-p4 {
+  margin-bottom: 24px;
+}
+.adoption-guide .button-secondary {
+  display: inline-block;
+  padding: 10px 12.5px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #fee8e3;
+  padding-top: 76px;
+  padding-bottom: 133px;
+}
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-content {
+  width: 24%;
+}
+.footer-content img {
+  width: 93px;
+}
+.footer-content .paragraph-p4 {
+  color: #58546a;
+  margin-top: 34px;
+  width: 80%;
+}
+.footer-nav {
+  width: 24%;
+}
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  color: #58546a;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.19;
+}
+.footer-nav li {
+  color: #58546a;
+}
+.footer-nav li:hover {
+  color: #e74f2c;
+}
+.footer-contact {
+  width: 24%;
+}
+.footer-contact .title-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  margin-bottom: 26px;
+}
+.footer-contact .title-contact::after {
+  top: 7px;
+  position: absolute;
+  height: 100%;
+  border-bottom: 2px solid rgba(39, 41, 55, 0.12);
+  content: "";
+  width: 100%;
+}
+.footer-contact .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-contact .footer-social a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-contact .title-contact .heading-h18 {
+  color: #b53518;
+}
+.footer-contact .contact-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.footer-contact .contact-info:nth-child(4) {
+  align-items: start;
+}
+.footer-contact .contact-info .contact-icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-contact .contact-icon img {
+  height: 18px;
+  width: 18px;
+  margin-right: 9px;
+}
+.footer-contact .paragraph-p4 {
+  color: #58546a;
+  width: 80%;
 }
