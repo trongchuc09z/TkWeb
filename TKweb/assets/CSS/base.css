@@ -1,0 +1,102 @@
+:root {
+    --white-color : #fff;
+    --black-color :#000;
+    --text-color : #333;
+    --main-color : #f53d2d;
+}
+
+* {
+    box-sizing: inherit; 
+    /* giúp các thành phần có tính kế thừa của thẻ html */
+}
+
+html {
+    font-size: 62.5%;  
+    /* Để giúp ước lượng em dễ hơn */
+    line-height: 1.6em;
+    font-family: Helvetica Neue, Helvetica, Arial, 文泉驛正黑, WenQuanYi Zen Hei, Hiragino Sans GB, 儷黑 Pro, LiHei Pro, Heiti TC, 微軟正黑體, Microsoft JhengHei UI, Microsoft JhengHei, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.grid {
+    width: 1200px; 
+    /* màn hình rộng 1280px nên 1200 để căn */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reponsive */
+.grid__column-2 {
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 83.3333%;
+}
+
+.grid__column-2-10 {
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 20%;
+}
