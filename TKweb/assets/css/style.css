@@ -16,6 +16,7 @@
 }
 .button-secondary {
   border: 1px solid #ff5b35;
+  transition: 0.2s;
 }
 .button-secondary:hover {
   background: #ff5b35;
@@ -25,6 +26,7 @@
   border: 1px solid #eae8f0;
   background: linear-gradient(262deg, #fbb91c -22.61%, #ff5b35 56.78%);
   color: #eae8f0;
+  transition: 0.2s;
 }
 .button-primary:hover {
   background: #ffdad1;
@@ -86,6 +88,13 @@
   cursor: pointer;
   transition: 0.3s;
 }
+.floating-buttons .back-to-top {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.floating-buttons .back-to-top.show {
+  opacity: 1;
+}
 .floating-buttons a:hover {
   transform: translate(0, -5px);
 }
@@ -140,6 +149,15 @@
 }
 .header .auth-links a:hover {
   color: #e74f2c;
+}
+.header .user {
+  margin-left: 30.5px;
+  display: none;
+  align-items: center;
+  gap: 12.5px;
+}
+.header .user .heading-h18 {
+  color: #58546a;
 }
 /* Main */
 /* Hero content */
@@ -254,9 +272,7 @@
   color: #6f6c85;
   margin-right: 10px;
 }
-.search-button {
-  padding-top: 6.25px;
-  padding-bottom: 6.25px;
+.search-box img {
   border: none;
   outline: none;
   background: transparent;
@@ -404,7 +420,6 @@
 .support-cta {
   padding-top: 82px;
   padding-bottom: 80px;
-  position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #992207 22.4%, rgba(255, 91, 53, 0) 88.4%),
     url(/TKweb/assets/img/support-cta.jpg) lightgray right / 79% no-repeat;
@@ -543,6 +558,7 @@
 
 /* Footer */
 .footer {
+  margin-top: 238px;
   background-color: #fee8e3;
   padding-top: 76px;
   padding-bottom: 133px;
@@ -639,4 +655,151 @@
 .footer-contact .paragraph-p4 {
   color: #58546a;
   width: 80%;
+}
+
+/* About us */
+/* Breadcum */
+.breadcrumb {
+  padding: 20px 0;
+}
+.breadcrumb .content {
+  display: flex;
+  gap: 10px;
+}
+.breadcrumb .paragraph-p3 {
+  color: #1c192a;
+}
+.breadcrumb a {
+  transition: 0.2s;
+}
+.breadcrumb a:hover {
+  color: #e74f2c;
+}
+/* intro */
+.intro {
+  padding-top: 63px;
+  padding-bottom: 86px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #992207 22.4%, rgba(255, 91, 53, 0) 88.4%),
+    url(/TKweb/assets/img/description-content.png) lightgray right / 79%
+      no-repeat;
+}
+.intro .heading-h54 {
+  margin-bottom: 16px;
+}
+.intro .paragraph-p3 {
+  width: 36%;
+}
+/* Furever description */
+.furever-description {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 129px;
+  padding-bottom: 44px;
+  margin-left: 12%;
+  justify-content: space-between;
+  gap: 96px;
+}
+.description-content {
+  width: 45%;
+}
+.description-content .heading-h54 {
+  color: #b53518;
+  margin-bottom: 21px;
+}
+.description-content .paragraph-p3 {
+  color: #000;
+  margin-bottom: 30px;
+}
+.description-image img {
+  border-radius: 122px 0 0 122px;
+  height: 528px;
+}
+/* Furever misson */
+.furever-misson {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-top: 129px;
+  padding-bottom: 44px;
+  margin-right: 12%;
+  justify-content: space-between;
+  width: 92%;
+  gap: 117px;
+}
+
+.misson-content {
+  width: 40%;
+}
+.misson-content .heading-h54 {
+  color: #b53518;
+  margin-bottom: 21px;
+}
+.misson-content .paragraph-p3 {
+  color: #000;
+  margin-bottom: 30px;
+}
+.misson-image img {
+  border-radius: 0 122px 122px 0;
+  height: 528px;
+}
+/* Why choose Furver */
+.why-choose-furever {
+  overflow: hidden;
+  padding: 290px 0 169px;
+  position: relative;
+}
+.why-choose-furever img {
+  position: absolute;
+  top: 12%;
+  right: -12%;
+}
+.why-choose-furever .heading-h54 {
+  color: #b53518;
+  margin-left: 10%;
+}
+.reasons {
+  margin-top: 60px;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.reason {
+  width: 562px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 6px 6px 13.8px 0px rgba(0, 0, 0, 0.15);
+  padding: 31px 96px 43px 64px;
+  position: relative;
+}
+.number-reason {
+  position: absolute;
+  color: #e74f2c;
+  width: 67px;
+  height: 67.151px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #fadcd5;
+}
+.reason .reason-content .title-card {
+  color: #000;
+  margin-bottom: 18px;
+}
+.reason .paragraph-p3 {
+  color: #000;
+}
+
+.reason:nth-child(2) {
+  margin-left: 100px;
+}
+.reason:nth-child(3) {
+  margin-left: 200px;
 }
