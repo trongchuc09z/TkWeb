@@ -55,11 +55,13 @@
 .account .accoutn-title{
     color: #1C192A;
     /* Dang nhap */
-    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 17px; /* 121.429% */
     margin-bottom: 6px;
+}
+.accoutn-title{
+    font-size: 14px;
 }
 
 .password .password-title{
@@ -121,14 +123,41 @@
     gap: 10px; /* Khoảng cách giữa các phần tử */
 }
 
-
+/* Ẩn giao diện mặc định của checkbox */
 #remember-password_tick{
-    border-radius: 11px;
     border: 1px solid #B8B4C8;
+    cursor: pointer;
+    appearance: none; /* Xóa giao diện mặc định */
+    -webkit-appearance: none; 
+    -moz-appearance: none;
     width: 20px;
     height: 20px;
-    cursor: pointer;
+    border-radius: 4px; 
+    background-color: white;
+    position: relative;
 }
+
+
+/* Giao diện khi checkbox được chọn */
+#remember-password_tick:checked {
+  background-color: #eb5c39; /* Màu nền khi được chọn */
+}
+
+/* Tạo dấu tích (checkmark) khi checkbox được chọn */
+#remember-password_tick:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
 
 .remember-password .remember-password_content{
     color: #7B778D;
@@ -159,15 +188,11 @@
     border-radius: 7.817px;
     border: 1px solid #EAE8F0;
     background: linear-gradient(262deg, #FBB91C -22.61%, #FF5B35 56.78%);
-
-
-
     color: #EAE8F0;
     font-size: 14.592px;
     font-style: normal;
     font-weight: 700;
     line-height: 20.324px; /* 139.286% */
-
     margin-bottom: 15px;
 }
 
@@ -274,7 +299,7 @@
     content: ''; 
     display: block; /* Để đảm bảo nó chiếm toàn bộ chiều rộng */
     border-top: 1px solid #2e2a43; /* Đường viền ngang */
-    width: 22%; /* Chiều rộng 100% của thẻ cha */
+    width: 25%; /* Chiều rộng 100% của thẻ cha */
     position: absolute;
     top: 50%; 
     right: 0;
@@ -286,7 +311,7 @@
     content: ''; 
     display: block; /* Để đảm bảo nó chiếm toàn bộ chiều rộng */
     border-top: 1px solid #2e2a43; /* Đường viền ngang */
-    width: 22%; /* Chiều rộng 100% của thẻ cha */
+    width: 25%; /* Chiều rộng 100% của thẻ cha */
     position: absolute;
     top: 50%; 
     left: 0;
@@ -311,3 +336,6 @@
     cursor: pointer;
 }
 
+.login-link-signup_link:hover{
+    color: #eb5c39;
+}
